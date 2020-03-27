@@ -7,4 +7,4 @@ In the description, we first provide a breif introduction to our methdology, and
 
 # Methodology #
 
-<img src ="Images/LSTM-MSNet-Framework.PNG" width="400">
+<img src ="Images/LSTM-MSNet-Framework.PNG" width="800" align="middle">
