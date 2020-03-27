@@ -77,6 +77,18 @@ The model expects a number of arguments.
 The first point of invoking the models is the `generic_model_energy_DS_trainer.py/generic_model_energy_SE_trainer.py` (for the simplicity of explaination, we use only the **DS** training paradigm scenario). The `generic_model_energy_DS_trainer.py` parses the external arguments and identifies the required type of model, optimizer, cell etc... The actual models are inside the directory `src/LSTM-Models/rnn_architectures/stacking_model/`. First, the hyperparameter tuning is carried out using the validation errors of the respective model trainer. Example initial hyperparameter ranges can be found inside the directory `src/LSTM-Models/configs/initial_hyperparameter_values`. The found optimal hyperparameter combination is  written to a file in the directory `src/LSTM-Models/results/optimized_configurations/`. Then the found optimal hyperparameter combination is used on the respective model tester to generate the final forecasts. The final forecasts is written to the `src/LSTM-Models/results/rnn_forecasts` directory.
 
 
+## Post Execution Steps ##
 
+### Error Calculation ###
+The SMAPE and MASE errors are calculated per each series can be calculated using the *solar_test.txt*, given the RNN forecast generated in the `src/LSTM-Models/results/rnn_forecasts` repository.
 
+When using this repository, please cite:
 
+```
+@article{Bandara2019-si,
+  title={{LSTM-MSNet}: Leveraging Forecasts on Sets of Related Time Series with Multiple Seasonal Patterns},
+  author={Bandara, Kasun, Bergmeir, Christoph, and Hewamalage, Hansika},
+  journal={arXiv preprint arXiv:1909.04293},
+  year={2019}
+}
+```
