@@ -31,5 +31,9 @@ Set the `PYTHONPATH` env variable of the system. Append absolute paths of both t
 
 ## Preprocessing the Data ##
 
-For R scripts (under src/LSTM-Preprocessing-Scripts), make sure to set the working directory to the project root folder. As an example, *solar_train.txt* file is hardcoded in the scripts. The current source code supports for comma seperated data input, however this can be easily adjustable for other delimiters.
+### Generating Train, Validation, and Test Scripts ###
+
+Three files need to be created for every model, one per training, validation and testing. For R scripts (under src/LSTM-Preprocessing-Scripts), make sure to set the working directory to the project root folder. As an example, *solar_train.txt* file is hardcoded in the scripts. The current source code supports for comma seperated data input, however this can be easily adjustable for other delimiters. 
+
+We assume *solar_train.txt* contain hourly energy consumption observations of multiple households. Each time series consists of 2 years of hourly data, and may present three types of seasonalities; *daily*, *weekly*, and *yearly*. As explained earlier, **SE** and **DS** is used to denote the two different paradigms.  **Baseline** denotes the varaint that does not use any paradigm when training the LSTM-MSNet  
 
