@@ -46,31 +46,30 @@ Sample Record of validation file in moving window format:
 
 ## Execution Instructions ##
 
-Example bash scripts are in the directory `utility_scripts/execution_scripts`. 
+Example bash script:
+
+`python ./generic_model_energy_DS_trainer.py --dataset_name energy_ds  --contain_zero_values 0 --initial_hyperparameter_values_file configs/initial_hyperparameter_values/energy_hourly --binary_train_file_train_mode datasets/binary_data/energy_ds/moving_window/energy_ds_30i24.tfrecords  --binary_valid_file_train_mode datasets/binary_data/energy_ds/moving_window/energy_ds_30i24v.tfrecords  --binary_train_file_test_mode datasets/binary_data/energy_ds/moving_window/energy_ds_12i15v.tfrecords  --binary_test_file_test_mode datasets/binary_data/CIF_2016/moving_window/energy_dstest.tfrecords  --txt_test_file datasets/text_data/CIF_2016/moving_window/energy_test.txt  --actual_results_file datasets/text_data/CIF_2016/energy_results.txt --input_size 30 --forecast_horizon 24 --optimizer cocob  -- cell_type LSTM --hyperparameter_tuning smac  --model_type stacking  --input_format moving_window  --seasonality_period 8766  --original_data_file datasets/text_data/CIF_2016/energy_train.txt --seed 1234`
 
 ### External Arguments ###
 The model expects a number of arguments.
 1. dataset_name - Any unique string for the name of the dataset
-2. contain_zero_values - Whether the dataset contains zero values(0/1)
-3. address_near_zero_instability - Whether the dataset contains zero values(0/1) - Whether to use a custom SMAPE function to address near zero instability(0/1). Default value is 0
-4. integer_conversion - Whether to convert the final forecasts to integers(0/1). Default is 0
-5. initial_hyperparameter_values_file - The file for the initial hyperparameter range configurations
-6. binary_train_file_train_mode - The tfrecords file for train dataset in the training mode
-7. binary_valid_file_train_mode - The tfrecords file for validation dataset in the training mode
-8. binary_train_file_test_mode - The tfrecords file for train dataset in the testing mode
-9. binary_test_file_test_mode - The tfrecords file for test dataset in the testing mode
-10. txt_test_file - The text file for test dataset
-11. actual_results_file - The text file of the actual results
-12. original_data_file - The text file of the original dataset with all the given data points
-13. cell_type - The cell type of the RNN(LSTM/GRU/RNN). Default is LSTM
-14. input_size - The input size of the moving window. Default is 0 in the case of non moving window format
-15. seasonality_period - The seasonality period of the time series
-16. forecast_horizon - The forecast horizon of the dataset
-17. optimizer - The type of the optimizer(cocob/adam/adagrad)
-18. model_type - The type of the model(stacking/seq2seq/seq2seqwithdenselayer)
-19. input_format - Input format(moving_window/non_moving_window)
-20. without_stl_decomposition - Whether not to use stl decomposition(0/1). Default is 0
-21. seed - Integer seed to use as the random seed for hyperparameter tuning
+3. contain_zero_values - Whether the dataset contains zero values(0/1)
+4. initial_hyperparameter_values_file - The file for the initial hyperparameter range configurations
+5. binary_train_file_train_mode - The tfrecords file for train dataset in the training mode
+6. binary_valid_file_train_mode - The tfrecords file for validation dataset in the training mode
+7. binary_train_file_test_mode - The tfrecords file for train dataset in the testing mode
+8. binary_test_file_test_mode - The tfrecords file for test dataset in the testing mode
+9. txt_test_file - The text file for test dataset
+10. actual_results_file - The text file of the actual results
+11. original_data_file - The text file of the original dataset with all the given data points
+12. cell_type - The cell type of the RNN(LSTM/GRU/RNN). Default is LSTM
+13. input_size - The input size of the moving window. Default is 0 in the case of non moving window format
+14. seasonality_period - The highest seasonality period of the time series (to calculate MASE)
+15. forecast_horizon - The forecast horizon of the dataset
+16. optimizer - The type of the optimizer(we only use cocob optimiser)
+17. model_type - The type of the model(we only use stacking architecture)
+18. input_format - Input format(we only use moving_window format)
+19. seed - Integer seed to use as the random seed for hyperparameter tuning
 
 ### Execution Flow ###
 
