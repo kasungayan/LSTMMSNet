@@ -6,3 +6,5 @@ This page contains the explanation of our LSTM-MSNet forecast framework, which c
 In the description, we first provide a breif introduction to our methdology, and then explain the steps to be followed to execute our code and use our framework for your research work.
 
 # Methodology #
+
+<img src ="Images/LSTM-MSNet-Framework.PNG" width="100">
