@@ -29,7 +29,7 @@ As illustrated in the above figure, the LSTM-MSNet framework consists of three m
 
 ## Path Variables ##
 
-Set the `PYTHONPATH` env variable of the system. Append absolute paths of both the project root directory and the directory of the `external_packages/cocob_optimizer` into the `PYTHONPATH`  
+Set the `PYTHONPATH` env variable of the system. Append absolute paths of both the project root directory and the directory of the `src/LSTM-Models/external_packages/cocob_optimizer` into the `PYTHONPATH`  
 
 ## Preprocessing the Data ##
 
