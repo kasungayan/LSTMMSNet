@@ -1,9 +1,9 @@
 LSTM-MSNet: Leveraging Forecasts on Sets of Related Time Series with Multiple Seasonal Patterns
 ===================
 
-This page contains the explanation of our LSTM-MSNet forecasting framework, which can be used to forecast a sets of time series with multiple seasonal patterns.
+This page contains the explanation of our **L**ong **S**hort-**T**erm **M**emory **M**ulti-**S**easonal **Net** (LSTM-MSNet) forecasting framework, which can be used to forecast a sets of time series with multiple seasonal patterns.
 
-In the description, we first provide a breif introduction to our methdology, and then explain the steps to be followed to execute our code, when using our framework.
+In the description, we first provide a breif introduction to our methdology, and then explain the steps to be followed to execute our code and use our framework for your research work.
 
 # Methodology #
 
@@ -22,3 +22,6 @@ We used **DS** and **SE** naming conventions in our code repository to distingui
 | `Python`  |  `>=3.6`  |
 | `Tensorflow`  | `1.12.0`  |
 | `smac`  | `0.8.0` |
+
+As illustrated in the above figure, the LSTM-MSNet framework consists of three main phases: i) pre-processing phase: using state-of-the-art multi-seasonal decomposition techniques, i.e., *MSTL*, *Prophet*, *Tbats* to extract the seasonal components. Additonally, for the **SE** approach *fourier terms* have been used to denote the seasonal trajectories (in order to supplement the subsequent LSTM training phase) ii) training phase: LSTM-MSNet framework training and iii) post-processing phase: retransform the forecasts into original scale.
+
