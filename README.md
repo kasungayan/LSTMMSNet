@@ -8,3 +8,5 @@ In the description, we first provide a breif introduction to our methdology, and
 # Methodology #
 
 <img src ="Images/LSTM-MSNet-Framework.PNG" width="800" align="center">
+
+The above figure gives an overview of the proposed LSTM-MSNet training paradigms. In the DS approach, deseasonalised time series are used to train the LSTM-MSNet. Here, a reseasonalisation phase is required as the target MW patches are seasonally adjusted. Whereas in the SE approach, the seasonal values extracted from the deseasonalisation phase are employed as exogenous variables, along with the original time series to train the LSTM-MSNet. Here a reseasonalisation phase is not required as the target MW patches contain the original distribution of the time series.
