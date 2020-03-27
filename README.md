@@ -29,5 +29,7 @@ As illustrated in the above figure, the LSTM-MSNet framework consists of three m
 
 Set the `PYTHONPATH` env variable of the system. Append absolute paths of both the project root directory and the directory of the `external_packages/cocob_optimizer` into the `PYTHONPATH`  
 
-For R scripts (under src/LSTM-Preprocessing-Scripts), make sure to set the working directory to the project root folder.
+## Preprocessing the Data ##
+
+For R scripts (under src/LSTM-Preprocessing-Scripts), make sure to set the working directory to the project root folder. As an example, *solar_train.txt* file is hardcoded in the scripts. The current source code supports for comma seperated data input, however this can be easily adjustable for other delimiters.
 
