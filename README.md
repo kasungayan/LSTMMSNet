@@ -13,7 +13,7 @@ The above figure gives an overview of the proposed LSTM-MSNet training paradigms
 
 We used **DS** and **SE** naming conventions in our code repository to distinguish these training paradigms. Please note that this repo contains seperate preprocessing files for each of these training paradigms. 
 
-**NOTICE**: You may find duplicated code as a result of these two paradigms. However, we expect to refactor this code, making type of the training paradigm, i.e., DS or SE, as a query parameter in our execution scripts. We also expect to migrate this source code to Tensorflow 2.0 soon. 
+**NOTICE**: You may find duplicated code as a result of these two paradigms. However, we expect to refactor this code, making the type of training paradigm, i.e., DS or SE, as a query parameter in our execution scripts. We also expect to migrate this source code to Tensorflow 2.0 soon. 
 
 # Usage #
 
