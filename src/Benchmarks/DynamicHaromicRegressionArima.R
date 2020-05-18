@@ -9,11 +9,11 @@ actual_df = matrix(nrow = 300, ncol = 24)
 
 start_time <- Sys.time()
 
-for(index in 1 : length(hourly_M4)){
+for(index in 1 : nrow(df_train)){
   print("start")
   #time series data.
-  cust_df <- as.numeric(df_train[1,])
-  actual_series <- as.numeric(df_test[1,])
+  cust_df <- as.numeric(df_train[index,])
+  actual_series <- as.numeric(df_test[index,])
   
   arima_ts = msts(cust_df, seasonal.periods = c(24,168,8766))
   
