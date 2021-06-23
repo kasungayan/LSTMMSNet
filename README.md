@@ -86,10 +86,13 @@ The SMAPE and MASE errors are calculated per each series can be calculated using
 When using this repository, please cite:
 
 ```
-@article{Bandara2019-si,
-  title={{LSTM-MSNet}: Leveraging Forecasts on Sets of Related Time Series with Multiple Seasonal Patterns},
-  author={Bandara, Kasun, Bergmeir, Christoph, and Hewamalage, Hansika},
-  journal={arXiv preprint arXiv:1909.04293},
-  year={2019}
-}
+@ARTICLE{Bandara2020-zt,
+   title    = "{LSTM-MSNet}: Leveraging Forecasts on Sets of Related Time Series
+               With Multiple Seasonal Patterns",
+   author   = "Bandara, Kasun and Bergmeir, Christoph and Hewamalage, Hansika",
+   journal  = "IEEE Trans Neural Netw Learn Syst",
+   month    =  apr,
+   year     =  2020,
+   language = "en"
+ }
 ```
